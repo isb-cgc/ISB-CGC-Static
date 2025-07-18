@@ -1,0 +1,230 @@
+<!--
+
+ Copyright 2016, Institute for Systems Biology
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pipelines and APIs | ISB-CGC</title>
+    <meta name="description" content="ISB-CGC Cancer Gateway in the Cloud">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link type="text/css" rel="stylesheet" href="/static/css/select2.min.css" />
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+    <script type="text/javascript" src="/static/js/libs/modernizr.js"></script>
+    
+
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131643069-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-131643069-1');
+        </script>
+    <script>
+        var STATIC_FILES_URL = '/static/';
+    </script>
+
+</head>
+<body id="body">
+<!--Include site main header-->
+ 
+
+
+
+
+<header class="site-header navbar-fixed-top fixed-top navbar-isb" role="menubar">
+</header>
+
+
+<main id="programmatic_access" class="main-content mt-5 pt-2">
+
+    <div class="page-heading">
+        
+    <div class="container mt-4">
+        <h4 class="page-header">Pipelines</h4>
+        <h5>A collection of tutorials and documentation on how to access and analyze cancer data programmatically through ISB-CGC APIs and Google Cloud Compute Engine.</h5>
+    </div>
+
+    </div>
+    <div class="container-fluid ps-0 pe-0">
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <div id="js-messages"></div>
+            </div>
+        </div>
+        <div>
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-12">
+               <h4 role="heading" aria-level="3">Getting Started</h4>
+               <p>Learn more about the different ways to access data programmatically</p>
+           </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i> Tutorials for Workflow on Google Cloud
+                    </div>
+                    <div class="card-body thumbnail">
+                        <a href="/workflow/" target="_blank" rel="noreferrer">
+                            <img src="/static/img/prog_access/workflow.svg" alt="Workflow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-exchange" aria-hidden="true"></i> Comparison of Workflow Languages
+                    </div>
+                    <div class="card-body thumbnail">
+                        <a href="/static/img/prog_access/workflow_comparisons.pdf" target="_blank" rel="noreferrer">
+                            <img src="/static/img/prog_access/languages.svg" alt="Comparison of Workflow Languages">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <p>For general information about the ISB-CGC, feature requests or bug reports please contact us at <a
+                        target="_blank" rel="noreferrer" href="mailto:feedback%40isb-cgc.org">feedback<span>@</span>isb-cgc<span>.</span>org</a>.
+                    We are especially keen on learning about
+                    your particular use-cases, and how we can help you take advantage of the latest in cloud-computing
+                    technologies to answer your research questions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <!-- Logout Modal -->
+</main>
+<div class="modal fade" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+
+                <h4 class="modal-title" id="logoutModalLabel">Logout</h4>
+                <button type="button" class="close float-end" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form method="post" action="/accounts/logout">
+                <div class="modal-body">
+                    <p>Are you sure you want to sign out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                    <input type="hidden" name="csrfmiddlewaretoken" value="KaEOjIT2iClp8OeWzzNrBmCbi2O288cSbTKoYrCaTUqzmR2QzZN83I0k1I8r1osc">
+                    
+                    <button type="submit" class="btn btn-primary">Sign Out</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Opt in dialog Modal -->
+<div class="ajax-form-modal modal fade" id="opt-in-pop-up-modal" tabindex="-1" role="dialog"
+         aria-labelledby="opt-in-modal-header" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+
+                    <h4 class="modal-title" id="opt-in-modal-header">Join Our Community</h4>
+                </div>
+                <div class="modal-body">
+                    <p  align="justify" class="modal-title" id="opt-in-modal-header">
+                        Let us keep you updated with our cloud-resources! <br>
+                        Would you like to subscribe to our mailing list? </p>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Yes" data-bs-dismiss="modal" class="btn btn-primary" id="opt-in-yes-btn"/>
+                    <input type="submit" value="No" data-bs-dismiss="modal" class="btn btn-secondary" id="opt-in-no-btn"/>
+                    <button type="button" class="btn btn-link float-end" data-bs-dismiss="modal" id="opt-in-ask-later-btn">Ask me later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Warning Modal -->
+<div class="modal fade" id="gov_warning" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="gov_warning-header" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                <h4 class="modal-title" id="gov_warning-header">Warning</h4>
+            </div>
+            <div class="modal-body">
+            <p>You are accessing a US Government web site which may contain information that must be protected under the
+                US Privacy Act or other sensitive information and is intended for Government authorized use only.</p>
+            <p>Unauthorized attempts to upload information, change information, or use of this web site may result in
+                disciplinary action, civil, and/or criminal penalties. Unauthorized users of this website should have no
+                expectation of privacy regarding any communications or data processed by this website.</p>
+            <p>Anyone accessing this website expressly consents to monitoring of their actions and all communications or
+                data transiting or stored on related to this website and is advised that if such monitoring reveals
+                possible evidence of criminal activity, NIH may provide that evidence to law enforcement officials.</p>
+            <p>The ISB-CGC system is authorized to be used by the public to view and analyze cancer data.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-warn">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var user_is_auth = false;
+    var warningSeen = true;
+    var showWarning = false;
+</script>
+
+<script>
+        fetch('/nav.html').then(res => res.text())
+      .then(data => {
+        document.getElementsByClassName('site-header')[0].innerHTML = data;
+      });
+</script>
+
+
+
+<script src="/static/js/libs/require.js"></script>
+<script src="/static/js/base.js"></script>
+
+
+</body>
+</html>
