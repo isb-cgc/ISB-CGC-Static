@@ -31,7 +31,7 @@
                 feedback-link="">
 
     <google-codelab-step label="Introduction" duration="0">
-        <p class="image-container"><img style="width: 273.50px" src="/static/img/code_lab/7322854d1a26fd9a.png">
+        <p class="image-container"><img style="width: 273.50px" src="static/img/code_lab/7322854d1a26fd9a.png">
         </p>
         <p>ISB-CGC, one of the National Cancer Institute&#39;s Cloud Resources, uniquely hosts cancer data including
             somatic mutations, copy number variations, gene and, protein expressions, etc. from widely used cancer
@@ -83,25 +83,25 @@
                 to create a new project.<br></li>
         </ul>
         <p><strong>Click on &#34;Select a project&#34; dropdown and click on New Project </strong></p>
-        <p class="image-container"><img style="width: 821.50px" src="/static/img/code_lab/e7862e6cbababaa2.png">
+        <p class="image-container"><img style="width: 821.50px" src="static/img/code_lab/e7862e6cbababaa2.png">
         </p>
         <p><strong> Pick a name for your new project then click &#34;Create&#34; </strong></p>
-        <p class="image-container"><img style="width: 766.20px" src="/static/img/code_lab/6c4df7c355e4be7c.jpeg"><br>
+        <p class="image-container"><img style="width: 766.20px" src="static/img/code_lab/6c4df7c355e4be7c.jpeg"><br>
         </p>
         <p><strong>Search for BigQuery in the Google Cloud Platform console</strong></p>
-        <p class="image-container"><img style="width: 792.23px" src="/static/img/code_lab/d52c0f4ce42e6e7e.png">
+        <p class="image-container"><img style="width: 792.23px" src="static/img/code_lab/d52c0f4ce42e6e7e.png">
         </p>
         <p><strong>Connect to ISB-CGC&#39;s cancer data tables in Google BigQuery<br><br></strong>Once on the BigQuery
             page, you will see an &#34;Add Data&#34; box with a &#34;Pin a Project&#34; option. Click on &#34;Pin a
             Project&#34;</p>
-        <p class="image-container"><img style="width: 769.50px" src="/static/img/code_lab/b94279356a0e689c.png">
+        <p class="image-container"><img style="width: 769.50px" src="static/img/code_lab/b94279356a0e689c.png">
         </p>
         <p><strong> Enter &#34;isb-cgc&#34; then click &#34;pin&#34;</strong></p>
-        <p class="image-container"><img style="width: 796.59px" src="/static/img/code_lab/dc2700493257b14f.png">
+        <p class="image-container"><img style="width: 796.59px" src="static/img/code_lab/dc2700493257b14f.png">
         </p>
         <p><strong>You will now see the isb-cgc open access BigQuery tables on the left-hand side pinned to your
             project. </strong></p>
-        <p class="image-container"><img style="width: 764.69px" src="/static/img/code_lab/5b3637a1b1f4b0e5.png">
+        <p class="image-container"><img style="width: 764.69px" src="static/img/code_lab/5b3637a1b1f4b0e5.png">
         </p>
 
 
@@ -112,7 +112,7 @@
             Search. </p>
         <p>Navigate to the ISB-CGC homepage: <a href="https://isb-cgc.org/" target="_blank" rel="noreferrer">https://isb-cgc.org</a> and
             click on the <strong>Launch</strong> icon in the <strong>BigQuery Table Search</strong> box.</p>
-        <p class="image-container"><img style="width: 760.73px" src="/static/img/code_lab/cfbe74f88dc01867.png">
+        <p class="image-container"><img style="width: 760.73px" src="static/img/code_lab/cfbe74f88dc01867.png">
         </p>
         <p>We want to build a cohort of TCGA patients for which both gene expression and protein abundance data exists.
             Let&#39;s search for ISB-CGC hosted BigQuery tables that contain information for TCGA gene expression,
@@ -121,7 +121,7 @@
             <li>Enter <strong>TCGA</strong> in the <strong>Program</strong> filter and <strong>Clinical Data</strong>,
                 <strong>Gene Expression</strong>, and <strong>Protein Expression</strong> in the <strong>Data
                     Type</strong> filter.<img style="width: 624.00px"
-                                              src="/static/img/code_lab/b275a01096839f73.png"></li>
+                                              src="static/img/code_lab/b275a01096839f73.png"></li>
         </ol>
         <aside class="special"><p><strong>Tip: </strong>To learn more about the different filter options available to
             search for BigQuery tables, see our <a
@@ -131,7 +131,7 @@
         <ol type="1" start="2">
             <li>To see the table schema of the clinical table, click on the (+) icon.</li>
         </ol>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/36daa299ba5afcd1.png">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/36daa299ba5afcd1.png">
         </p>
         <ol type="1" start="3">
             <li>Navigate to the Google Cloud Platform (GCP) BigQuery Console by clicking on the &#34;open&#34; button
@@ -139,7 +139,7 @@
                 Search row.
             </li>
         </ol>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/787bbd0345303fe5.png">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/787bbd0345303fe5.png">
         </p>
         <p>Now that you&#39;ve found your tables of interest, let&#39;s build some queries in the BigQuery console!</p>
 
@@ -150,7 +150,7 @@
         <p>On the Google Cloud BigQuery Console we can preview the table, look at the schema (including column names,
             descriptions, table sizes, etc), and perform queries. The image below shows the preview of the contents of
             the TCGA Clinical BigQuery table.</p>
-        <p class="image-container"><img style="width: 713.50px" src="/static/img/code_lab/b656d42c7372ed8e.png">
+        <p class="image-container"><img style="width: 713.50px" src="static/img/code_lab/b656d42c7372ed8e.png">
         </p>
         <p>Try out these short queries to explore TCGA data by simply entering the SQL commands in the Query Editor and
             clicking <strong>Run</strong>: </p>
@@ -226,19 +226,19 @@ WHERE
         <p><strong>Navigate to the RStudio Cloud webpage: </strong><a href="https://rstudio.cloud"
                                                                       target="_blank" rel="noreferrer"><strong>https://rstudio.cloud</strong></a>
         </p>
-        <p class="image-container"><img style="width: 742.50px" src="/static/img/code_lab/ea98993edb6f4e42.png">
+        <p class="image-container"><img style="width: 742.50px" src="static/img/code_lab/ea98993edb6f4e42.png">
         </p>
         <p><strong>Login to RStudio Cloud using your Google ID. </strong></p>
-        <p class="image-container"><img style="width: 721.50px" src="/static/img/code_lab/dc78e38de42706f4.png">
+        <p class="image-container"><img style="width: 721.50px" src="static/img/code_lab/dc78e38de42706f4.png">
         </p>
         <p><strong>Provide a name for your account</strong></p>
-        <p class="image-container"><img style="width: 714.50px" src="/static/img/code_lab/27a4e458b5700051.png">
+        <p class="image-container"><img style="width: 714.50px" src="static/img/code_lab/27a4e458b5700051.png">
         </p>
         <p><strong>Creating a new Project will deploy an R console</strong><img style="width: 738.00px"
-                                                                                src="/static/img/code_lab/3f2f62383d2fcf43.png">
+                                                                                src="static/img/code_lab/3f2f62383d2fcf43.png">
         </p>
         <p><strong>Let&#39;s begin working in the R console! </strong></p>
-        <p class="image-container"><img style="width: 744.50px" src="/static/img/code_lab/6cc0a4dcc954c5eb.png">
+        <p class="image-container"><img style="width: 744.50px" src="static/img/code_lab/6cc0a4dcc954c5eb.png">
         </p>
         <p>The <strong>bigrquery</strong> package is designed to work with data stored in Google BigQuery tables. More
             information about the package can be found here: <a href="https://bigrquery.r-dbi.org/" target="_blank" rel="noreferrer">https://bigrquery.r-dbi.org/</a>
@@ -262,7 +262,7 @@ clinical_tbl &lt;- bq_project_query (project, query = sql) #Put data in temporar
 clinical_data &lt;- bq_table_download(clinical_tbl) #Put data into a dataframe
 head(clinical_data)</code></pre>
         <p>The first 5 rows of the clinical_data dataframe looks like this:</p>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/ffcfd1cd4c844388.png">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/ffcfd1cd4c844388.png">
         </p>
 
 
@@ -281,7 +281,7 @@ hist(clinical_data[clinical_data$project_short_name == &#34;TCGA-KIRP&#34;,]$age
 hist(clinical_data[clinical_data$project_short_name == &#34;TCGA-KICH&#34;,]$age_at_diagnosis,
     xlim=c(15,100), ylim=c(0,40), breaks=seq(15,100,2),
     col=&#34;#99CCFF&#34;, main=&#39;TCGA-KICH&#39;, xlab=&#39;Age at diagnosis (years)&#39;)</code></pre>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/2ecb1b37c2822899.jpeg">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/2ecb1b37c2822899.jpeg">
         </p>
         <pre><code># Create SQL query to retrieve the mean gene expression and mean protein expression per project/case.
 
@@ -310,7 +310,7 @@ options(scipen=20)
 expression_data &lt;- bq_table_download(bq_project_query (project, query = sql_expression)) #Put data into a dataframe
 head(expression_data)
 </code></pre>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/b9c606af226a5eda.png">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/b9c606af226a5eda.png">
         </p>
         <pre><code>expression_data$id &lt;- paste(expression_data$project_short_name, expression_data$case_barcode, sep=&#39;.&#39;)
 cases &lt;- unique(expression_data$id)
@@ -325,7 +325,7 @@ list_exp &lt;- lapply(cases, function(case){
 gene_exps &lt;- Reduce(function(x, y) merge(x, y, all=T, by=&#34;gene_name&#34;), list_exp)
 head(gene_exps)
 dim(gene_exps)</code></pre>
-        <p class="image-container"><img style="width: 833.73px" src="/static/img/code_lab/5940333b4c971a1a.png">
+        <p class="image-container"><img style="width: 833.73px" src="static/img/code_lab/5940333b4c971a1a.png">
         </p>
         <pre><code># Perform the same transform for protein abundance.
   list_abun &lt;- lapply(cases, function(case){
@@ -336,7 +336,7 @@ dim(gene_exps)</code></pre>
   pep_abun &lt;- Reduce(function(x, y) merge(x, y, all=T, by=&#34;gene_name&#34;), list_abun)
   head(pep_abun)
   dim(pep_abun)</code></pre>
-        <p class="image-container"><img style="width: 764.50px" src="/static/img/code_lab/6cfa4b867cb327e1.png">
+        <p class="image-container"><img style="width: 764.50px" src="static/img/code_lab/6cfa4b867cb327e1.png">
         </p>
         <pre><code># Separate the cohorts (types of kidney cancer) into two dataframes and
 # generate a scatterplot of gene expression and protein abundance.
@@ -347,7 +347,7 @@ plot(log(rowMeans(exp_p)), log(rowMeans(exp_c)),
     xlab=&#39;log(FPKM KIRP)&#39;, ylab=&#39;log(FPKM KICH)&#39;,
     xlim=c(-3.5,7.5), ylim=c(-3.5,7.5), pch=19, cex=2,
     col=rgb(178,34,34,max=255,alpha=150))</code></pre>
-        <p class="image-container"><img style="width: 480.00px" src="/static/img/code_lab/df773739e1a1bcbc.jpeg">
+        <p class="image-container"><img style="width: 480.00px" src="static/img/code_lab/df773739e1a1bcbc.jpeg">
         </p>
         <p>Let&#39;s compare the protein expression between KIRP and KICH. </p>
         <pre><code># Get Protein expression second
@@ -357,7 +357,7 @@ plot(rowMeans(abun_p), rowMeans(abun_c),
    xlab=&#39;KIRP protein abundance&#39;, ylab=&#34;KICH protein abundance&#34;,
    xlim=c(-0.25,0.3), ylim=c(-0.25,0.3), pch=19, cex=2,
    col=rgb(140,140,230,max=255,alpha=150))</code></pre>
-        <p class="image-container"><img style="width: 480.00px" src="/static/img/code_lab/495ce4c7c3dbf93d.jpeg">
+        <p class="image-container"><img style="width: 480.00px" src="static/img/code_lab/495ce4c7c3dbf93d.jpeg">
         </p>
 
 
@@ -398,23 +398,23 @@ colnames(maf_kirp)[9] &lt;- &#34;Tumor_Sample_Barcode&#34;
 
 head(maf_kich)
 head(maf_kirp)</code></pre>
-        <p class="image-container"><img style="width: 840.50px" src="/static/img/code_lab/66c0c59e76f2318f.jpeg">
+        <p class="image-container"><img style="width: 840.50px" src="static/img/code_lab/66c0c59e76f2318f.jpeg">
         </p>
         <p>We now have our cohort MAF information from our query saved in dataframes. Let&#39;s convert them into MAF
             objects. </p>
         <pre><code># Convert data frames to maftools objects.
 kich &lt;- read.maf(maf_kich)
 kirp &lt;- read.maf(maf_kirp)</code></pre>
-        <p class="image-container"><img style="width: 276.50px" src="/static/img/code_lab/6ed7a09d1593ee09.png">
+        <p class="image-container"><img style="width: 276.50px" src="static/img/code_lab/6ed7a09d1593ee09.png">
         </p>
         <p>Once in MAF object format, we can now use the MAFtools built-in plot functionality on the data we have
             queried from the BigQuery somatic mutation table. </p>
         <pre><code>#Maftools plots
 plotmafSummary(maf = kich, rmOutlier = TRUE, addStat = &#39;median&#39;, dashboard = TRUE, titvRaw = FALSE)</code></pre>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/8fbb1d36e296d9a7.jpeg">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/8fbb1d36e296d9a7.jpeg">
         </p>
         <pre><code>plotmafSummary(maf = kirp, rmOutlier = TRUE, addStat = &#39;median&#39;, dashboard = TRUE, titvRaw = FALSE)</code></pre>
-        <p class="image-container"><img style="width: 624.00px" src="/static/img/code_lab/72f7e1f840af5590.jpeg">
+        <p class="image-container"><img style="width: 624.00px" src="static/img/code_lab/72f7e1f840af5590.jpeg">
         </p>
 
 
