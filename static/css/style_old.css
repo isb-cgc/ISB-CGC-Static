@@ -3739,13 +3739,13 @@ span.code {
     color: #f00a0a;
     cursor: pointer; }
   #circviz i.icon-ucsc {
-    content: url("/static/img/ucsc.png"); }
+    content: url("static/img/ucsc.png"); }
   #circviz i.icon-cosmic {
-    content: url("/static/img/cosmic.png"); }
+    content: url("static/img/cosmic.png"); }
   #circviz i.icon-ensembl {
-    content: url("/static/img/ensembl.png"); }
+    content: url("static/img/ensembl.png"); }
   #circviz i.icon-mirBase {
-    content: url("/static/img/mirbase.png"); }
+    content: url("static/img/mirbase.png"); }
 
 #igv i.igv-app-icon {
   background-color: transparent; }
