@@ -32,11 +32,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-    <link type="text/css" rel="stylesheet" href="static/css/select2.min.css" />
-    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="/static/css/select2.min.css" />
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
 
-    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
-    <script type="text/javascript" src="static/js/libs/modernizr.js"></script>
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+    <script type="text/javascript" src="/static/js/libs/modernizr.js"></script>
     
 
     
@@ -51,7 +51,7 @@
         </script>
     
     <script>
-        var STATIC_FILES_URL = 'static/';
+        var STATIC_FILES_URL = '/static/';
 
     </script>
 </head>
@@ -76,7 +76,7 @@
     <div class="page-heading">
         
 <div class="container">
-    <h1 class="page-header">Video Tutorials</h1>
+    <h1 class="card-header">Video Tutorials</h1>
 </div>
 
     </div>
@@ -89,32 +89,16 @@
         </div>
         <div>
     <div class="container">
-        <section class="panel panel-default">
-            <div class="panel-body">
+        <section class="card panel-default">
+            <div class="card-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6 col-lg-3 col-sm-12">
-                            <h5>An Introduction to ISB-CGC</h5>
-                            <div class="vid-container">
-                                <a href="https://www.youtube.com/watch?v=5hVgGW346wI"
-                                   target="_blank" rel="noreferrer nofollow"><img src="static/img/tutorials/yt1a.png"
-                                                                         alt="Overview video thumbnail">
-                                    <span class="fa fa-external-link-square fa-3x"></span></a>
-                            </div>
-                            <div class="vid-desc-text">
-                                With a combination of custom developed and existing Google Cloud tools such as BigQuery
-                                and Compute Engine ISB Cancer Gateway in the Cloud (ISB-CGC) assists a variety of
-                                users – from bench biologists, to computational scientists, to algorithm developers. We
-                                hope this overview of our platform inspires you to explore the many cloud based resources
-                                available for cancer research.
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-sm-12">
+                        <div class="col-md-6 col-lg-6 col-sm-12">
                             <h5>A Video Walkthrough of ISB-CGC and CRDC Resources</h5>
                             <div class="vid-container">
                                 <a href="https://cbiit.webex.com/recordingservice/sites/cbiit/recording/667f0d28b0c344cf85cd3f9c1f494c12/playback"
-                                   target="_blank" rel="noreferrer nofollow"><img src="static/img/tutorials/yt1.png"
-                                                                         alt="Overview video thumbnail">
+                                   target="_blank" rel="noreferrer nofollow"><img src="/static/img/tutorials/yt1.png"
+                                                                         alt="Overview video thumbnail" style="width:100%">
                                     <span class="fa fa-external-link-square fa-3x"></span></a>
                             </div>
                             <div class="vid-desc-text">
@@ -124,33 +108,20 @@
                                 benefits of using BQ and SQL to perform bioinformatics in the cloud.
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 col-sm-12">
+                        <div class="col-md-6 col-lg-6 col-sm-12">
                             <h5>How to Sign Up with a Google Account</h5>
                             <div class="vid-container">
                                 <a href="https://www.youtube.com/watch?v=q9q1g1-cf7M&list=PLOojCp_ZOt2ccbQyZ3niBCU4DG6XL5htb"
-                                   target="_blank" rel="noreferrer nofollow"><img src="static/img/tutorials/yt2.png"
-                                                                         alt="Overview video thumbnail">
+
+                                   target="_blank" rel="noreferrer nofollow"><img src="/static/img/tutorials/yt2.png"
+                                                                         alt="Overview video thumbnail" style="width:100%">
+
                                     <span class="fa fa-external-link-square fa-3x"></span></a>
                             </div>
                             <div class="vid-desc-text">
                                 This video will show you the steps necessary to sign up and link your google cloud project
                                 (GCP) to an ISB-CGC account. This enables you export to BigQuery tables and read and write
                                 to cloud buckets, including many other features.
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 col-sm-12">
-                            <h5>How to Build a Cohort</h5>
-                            <div class="vid-container">
-                                <a href="https://www.youtube.com/watch?v=2db_zxp8-8M&list=PLOojCp_ZOt2ccbQyZ3niBCU4DG6XL5htb"
-                                   target="_blank" rel="noreferrer nofollow"><img src="static/img/tutorials/yt3.png"
-                                                                         alt="Overview video thumbnail">
-                                    <span class="fa fa-external-link-square fa-3x"></span></a>
-                            </div>
-                            <div class="vid-desc-text">
-                                In this video, we use the cohort builder to generate lists of cases (patients) based on
-                                various clinical and molecular features. Cohorts are saved and accessible as a list in
-                                the user's 'Saved Cohorts' panel (found in top level menu) and is the first step in any
-                                downstream analysis.
                             </div>
                         </div>
                     </div>
@@ -164,53 +135,6 @@
 
     <!-- Logout Modal -->
 </main>
-<div class="modal fade" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-
-
-                <h4 class="modal-title" id="logoutModalLabel">Logout</h4>
-                <button type="button" class="close float-end" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <form method="post" action="/accounts/logout">
-                <div class="modal-body">
-                    <p>Are you sure you want to sign out?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-                    <input type="hidden" name="csrfmiddlewaretoken" value="qDngUR7AcvrwZ6WsvPAWSDrTLlfLcddfRmtQzAQINNwGd9KmvfADkZP2u1za5ttz">
-                    
-                    <button type="submit" class="btn btn-primary">Sign Out</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-    <!-- Opt in dialog Modal -->
-<div class="ajax-form-modal modal fade" id="opt-in-pop-up-modal" tabindex="-1" role="dialog"
-         aria-labelledby="opt-in-modal-header" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-
-
-                    <h4 class="modal-title" id="opt-in-modal-header">Join Our Community</h4>
-                </div>
-                <div class="modal-body">
-                    <p  align="justify" class="modal-title" id="opt-in-modal-header">
-                        Let us keep you updated with our cloud-resources! <br>
-                        Would you like to subscribe to our mailing list? </p>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" value="Yes" data-bs-dismiss="modal" class="btn btn-primary" id="opt-in-yes-btn"/>
-                    <input type="submit" value="No" data-bs-dismiss="modal" class="btn btn-secondary" id="opt-in-no-btn"/>
-                    <button type="button" class="btn btn-link float-end" data-bs-dismiss="modal" id="opt-in-ask-later-btn">Ask me later</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 <!-- Warning Modal -->
@@ -241,7 +165,6 @@
 
 
 <script>
-    var user_is_auth = false;
     var warningSeen = true;
     var showWarning = false;
 </script>
@@ -252,18 +175,20 @@
 
 
 <script>
-        fetch('/nav.html').then(res => res.text())
+        fetch('../nav.html').then(res => res.text())
       .then(data => {
         document.getElementsByClassName('site-header')[0].innerHTML = data;
+        document.getElementsByClassName('isblogo')[0].src="../static/img/isblogo.png"
       });
+
 </script>
 
 
 
-<script src="static/js/libs/require.js"></script>
-<script src="static/js/base.js"></script>
+<script src="/static/js/libs/require.js"></script>
+<script src="/static/js/base.js"></script>
 
-<script src="static/js/landing.js"></script>
+<script src="/static/js/landing.js"></script>
 
 </body>
 </html>

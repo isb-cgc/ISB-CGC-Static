@@ -23,16 +23,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Pipelines and APIs | ISB-CGC</title>
+    <title>Pipelines | ISB-CGC</title>
     <meta name="description" content="ISB-CGC Cancer Gateway in the Cloud">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-    <link type="text/css" rel="stylesheet" href="static/css/select2.min.css" />
-    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="/static/css/select2.min.css" />
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
 
-    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
-    <script type="text/javascript" src="static/js/libs/modernizr.js"></script>
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css" />
+    <script type="text/javascript" src="/static/js/libs/modernizr.js"></script>
     
 
     
@@ -46,7 +46,7 @@
           gtag('config', 'UA-131643069-1');
         </script>
     <script>
-        var STATIC_FILES_URL = 'static/';
+        var STATIC_FILES_URL = '/static/';
     </script>
 
 </head>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="card-body thumbnail">
                         <a href="/workflow/" target="_blank" rel="noreferrer">
-                            <img src="static/img/prog_access/workflow.svg" alt="Workflow">
+                            <img src="/static/img/prog_access/workflow.svg" alt="Workflow">
                         </a>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                         <i class="fa fa-exchange" aria-hidden="true"></i> Comparison of Workflow Languages
                     </div>
                     <div class="card-body thumbnail">
-                        <a href="static/img/prog_access/workflow_comparisons.pdf" target="_blank" rel="noreferrer">
-                            <img src="static/img/prog_access/languages.svg" alt="Comparison of Workflow Languages">
+                        <a href="/static/img/prog_access/workflow_comparisons.pdf" target="_blank" rel="noreferrer">
+                            <img src="/static/img/prog_access/languages.svg" alt="Comparison of Workflow Languages">
                         </a>
                     </div>
                 </div>
@@ -131,53 +131,6 @@
 
     <!-- Logout Modal -->
 </main>
-<div class="modal fade" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-
-
-                <h4 class="modal-title" id="logoutModalLabel">Logout</h4>
-                <button type="button" class="close float-end" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <form method="post" action="/accounts/logout">
-                <div class="modal-body">
-                    <p>Are you sure you want to sign out?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
-                    <input type="hidden" name="csrfmiddlewaretoken" value="KaEOjIT2iClp8OeWzzNrBmCbi2O288cSbTKoYrCaTUqzmR2QzZN83I0k1I8r1osc">
-                    
-                    <button type="submit" class="btn btn-primary">Sign Out</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-    <!-- Opt in dialog Modal -->
-<div class="ajax-form-modal modal fade" id="opt-in-pop-up-modal" tabindex="-1" role="dialog"
-         aria-labelledby="opt-in-modal-header" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-
-
-                    <h4 class="modal-title" id="opt-in-modal-header">Join Our Community</h4>
-                </div>
-                <div class="modal-body">
-                    <p  align="justify" class="modal-title" id="opt-in-modal-header">
-                        Let us keep you updated with our cloud-resources! <br>
-                        Would you like to subscribe to our mailing list? </p>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" value="Yes" data-bs-dismiss="modal" class="btn btn-primary" id="opt-in-yes-btn"/>
-                    <input type="submit" value="No" data-bs-dismiss="modal" class="btn btn-secondary" id="opt-in-no-btn"/>
-                    <button type="button" class="btn btn-link float-end" data-bs-dismiss="modal" id="opt-in-ask-later-btn">Ask me later</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 <!-- Warning Modal -->
@@ -217,13 +170,14 @@
         fetch('/nav.html').then(res => res.text())
       .then(data => {
         document.getElementsByClassName('site-header')[0].innerHTML = data;
+        document.getElementsByClassName('isblogo')[0].src="../static/img/isblogo.png"
       });
 </script>
 
 
 
-<script src="static/js/libs/require.js"></script>
-<script src="static/js/base.js"></script>
+<script src="/static/js/libs/require.js"></script>
+<script src="/static/js/base.js"></script>
 
 
 </body>
