@@ -295,14 +295,29 @@ a.skip-nav {
 
     #landing .resources-div .learn-icon {
       background-image: url("../img/orange-lightbulb.png"); }
+    #landing .resources-div .learn-icon:hover {
+      background-image: url("../img/orange-lightbulb-hover.png"); }
+     
     #landing .resources-div .launch-icon {
       background-image: url("../img/orange-rocket.png"); }
+      #landing .resources-div .launch-icon:hover {
+      background-image: url("../img/orange-rocket-hover.png"); }
     #landing .resources-div .statistical-icon {
       background-image: url("../img/orange-statistical.png"); }
+     #landing .resources-div .statistical-icon:hover {
+      background-image: url("../img/orange-statistical-hover.png"); }
+
     #landing .resources-div .community-icon {
       background-image: url("../img/orange-community.png"); }
+    #landing .resources-div .community-icon:hover {
+      background-image: url("../img/orange-community-hover.png"); }
+
+
     #landing .resources-div .github-icon {
       background-image: url("../img/orange-github.png"); }
+    #landing .resources-div .github-icon:hover {
+      background-image: url("../img/orange-github-hover.png"); } 
+    
   #landing .jumbotron-fluid > .container-fluid {
     padding: 0 5%; }
   #landing .bottom-div {
