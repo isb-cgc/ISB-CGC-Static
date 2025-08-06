@@ -21,10 +21,6 @@
 // Return an object for consts/methods used by most views
 define(['jquery'], function($) {
 
-    // Download block poll with cookie via StackOverflow:
-    // https://stackoverflow.com/questions/1106377/detect-when-browser-receives-file-download
-    var downloadTimer;
-    var attempts = 30;
 
     // Adapted from https://docs.djangoproject.com/en/1.9/ref/csrf/
     function _getCookie(name) {
@@ -69,58 +65,10 @@ define(['jquery'], function($) {
         document.cookie = encodeURIComponent(name) + "=deleted; Path="+path+"; expires=" + new Date(0).toUTCString();
     };
 
-    // Clear and reset the cookie-poll and fire the provided callback
-    // Callback can be used on a given page to unblock any DOM-based impediments
-    function unblockSubmit(callback,cookieName) {
-        window.clearInterval(downloadTimer);
-        _expireCookie(cookieName);
-        attempts = 30;
-        callback();
-    };
+
 
     return {
-        // Simple method for displaying an alert-<type> message at a given selector or DOM element location.
-        //
-        // type: One of the accepted alert types (danger, error, info, warning)
-        // text: Content of the alert, added via jQuery.text() (and so escaped)
-        // withEmpty: Truthy boolean for indicating if the element represented by rootSelector should first be emptied
-        // rootSelector: text selector or DOM element which will be the parent of the alert; defaults to #js-messages
-        //  (the DIV present on all pages which shows document-level JS messages)
-        showJsMessage: function(type,text,withEmpty,rootSelector) {
-            rootSelector = rootSelector || '#js-messages';
-            withEmpty && $(rootSelector).empty();
-            var msg = "";
-            if(text instanceof Array){
-                for(var i=0; i<text.length; i++) {
-                    msg += text[i] + '<br />';
-                }
-            } else {
-                msg = text;
-            }
-            $(rootSelector).append(
-                $('<div>')
-                    .addClass('alert alert-'+type +' alert-dismissible')
-                    .html(msg)
-                    .prepend(
-                        '<button type="button" class="close" data-bs-dismiss="alert"><span aria-hidden="true">'
-                        +'&times;</span><span class="visually-hidden">Close</span></button>'
-                    )
-            );
-        },
-        // Block re-requests of requests which can't be handled via AJAX (eg. file downloads)
-        // Uses cookie polling
-        // Request provides a parameter with a key of expectedCookie and a value of downloadToken
-        // Handling view on server side must set a cookie of key expectedCookie to the downloadToken value
-        // in its response
-        blockResubmit: function(callback,downloadToken,expectedCookie) {
-            downloadTimer = window.setInterval( function() {
-                var token = _getCookie(expectedCookie);
-                if((token == downloadToken) || (attempts == 0)) {
-                    unblockSubmit(callback,expectedCookie);
-                }
-                attempts--;
-            }, 1000 );
-        },
+
         setCookie: _setCookie,
         getCookie: _getCookie,
         removeCookie: _removeCookie

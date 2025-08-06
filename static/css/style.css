@@ -337,22 +337,15 @@ a.skip-nav {
 .alert {
   border-radius: 1px;
   border: 5px solid transparent;
-  padding: 10px; }
+  padding: 10px;
+  background-color: #fd7dd;
+  border-color: #eb9121;
+}
+
   .alert .close {
-    right: 0px; }
-  .alert.alert-success {
-    background-color: #F8F8F8;
-    border-color: #76b876; }
-  .alert.alert-info {
-    color: #2d81c4;
-    background-color: #F8F8F8;
-    border-color: #1976D2; }
-  .alert.alert-warning, .alert.alert-password-expire {
-    background-color: #F8F8F8;
-    border-color: #FFA000; }
-  .alert.alert-error {
-    background-color: #F8F8F8;
-    border-color: #D32F2F; }
+    position:relative;
+    float: right; }
+
 
 
   button.close{

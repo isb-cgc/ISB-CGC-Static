@@ -20,77 +20,44 @@ require.config({
     baseUrl: STATIC_FILES_URL+'js/',
     paths: {
         'jquery': ['libs/jquery-3.7.1.min'],
-        'bootstrap': ['libs/bootstrap.bundle.min'],
-        'jqueryui': ['libs/jquery-ui.min'],
+        'bootstrap': ['libs/bootstrap.bundle.min']
     },
     shim: {
-        'bootstrap': ['jquery'],
-        'jqueryui': ['jquery'],
+        'bootstrap': ['jquery']
     }
 });
 
 // Set up common JS UI actions which span most views
 require([
     'jquery',
-    'jqueryui',
     'bootstrap',
     'utils',
 ], function($, jqueryui, bootstrap, utils) {
     'use strict';
 
-
     $('#gov_warning button').on('click', function () {
-        $('#gov_warning button').prop("disabled", true);
-        $('#gov_warning').modal('hide');
-        $.ajax({
-            async: true,
-            type: "GET",
-            url: "/warning/",
-            contentType: "charset=utf-8",
-            fail: function () {
-                console.warn("Unable to record status for Government Notice! You may see that popup again.");
-            },
-            always: function () {
-                $('#gov_warning button').prop("disabled", false);
-            }
-        });
+         $('#gov_warning').modal('hide');
     });
 
-    if (!warningSeen && showWarning) {
+
+    if (!utils.getCookie('seenWarning') || !(utils.getCookie('seenWarning') =="true")) {
+        utils.setCookie('seenWarning','true',null,null)
         $('#gov_warning').modal('show');
     }
 
-    $(document).ready(function () {
-        if (sessionStorage.getItem("reloadMsg")) {
-            var msg = JSON.parse(sessionStorage.getItem("reloadMsg"));
-            utils.showJsMessage(msg.type, msg.text, true);
-        }
-        sessionStorage.removeItem("reloadMsg");
-    });
+
 })
 
 // Return an object for consts/methods used by most views
 define('base',['jquery', 'utils'], function($, utils) {
 
     return {
-        blacklist: /<script>|<\/script>|!\[\]|!!\[\]|\[\]\[\".*\"\]|<iframe>|<\/iframe>/ig,
-        barcode_file_whitelist: /[^A-Za-z0-9\-,\t_\."'\s\(\) \/;:]/g,
-        // From http://www.regular-expressions.info/email.html
-        email: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
-        showJsMessage: utils.showJsMessage,
-        // Simple method for standardizing storage of a message into sessionStorage so it can be retrieved and reloaded
-        // at document load time
-        setReloadMsg: function(type,text) {
-            sessionStorage.setItem("reloadMsg",JSON.stringify({type: type, text: text}));
-        },
         setCookie: function(name,val,expires_in,path) {
             utils.setCookie(name,val,expires_in,path);
         },
         removeCookie: function(name, path) {
             utils.removeCookie(name, path);
-        },
-
-        blockResubmit: utils.blockResubmit
+        }
     };
 });
 
