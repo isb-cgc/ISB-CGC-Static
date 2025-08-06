@@ -32,7 +32,7 @@ require([
     'jquery',
     'bootstrap',
     'utils',
-], function($, jqueryui, bootstrap, utils) {
+], function($, bootstrap, utils) {
     'use strict';
 
     $('#gov_warning button').on('click', function () {
