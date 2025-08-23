@@ -12,4 +12,3 @@ fi
 
 # Clean up the static site directory before deploying the redirect
 rm -rf ./static_site
-
