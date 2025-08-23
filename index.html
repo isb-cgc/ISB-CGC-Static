@@ -1,6 +1,6 @@
 <!--
 
- Copyright 2016, Institute for Systems Biology
+ Copyright 2016-2025, Institute for Systems Biology
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -49,18 +49,10 @@
 </head>
 <body id="body">
 <!--Include site main header-->
-
-
-<header class="site-header navbar-fixed-top fixed-top navbar-isb" role="menubar">
-
-</header>
-
-
+<header class="site-header navbar-fixed-top fixed-top navbar-isb" role="menubar"></header>
 
 <main id="landing" class="main-content mt-5 pt-2">
-
     <main class="widen-landing-page">
-
         <div class="container-fluid width-spec">
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-bs-dismiss="alert"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
@@ -71,8 +63,6 @@
                 will remain online, and the Notebook Collection will continue to be available; these resources will all
                 be updated and maintained. If you have any questions, please contact us at
                 <a href="mailto:feedback@isb-cgc.org">feedback@isb-cgc.org</a>.
-
-
             </div>
         </div>
 
@@ -210,7 +200,6 @@
                     <div class="ps-5 col-md-6 col-lg-11">
                         <h3>Resources</h3>
                     </div>
-
                 </div>
 
                 <div class="row cards-row">
@@ -335,12 +324,11 @@
             </div>
         </div>
 
-
         <div class="jumbotron-fluid footer-div">
             <div class="container">
                 <div class="row">
                     <div class="col-3 col-md-2 col-lg-1 text-left">
-                        &copy; 2020, ISB
+                        &copy; 2025, ISB
                     </div>
                     <div class="col-6 col-md-8 col-lg-10 text-center">
                         <a href="/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a> |
@@ -368,10 +356,7 @@
                 </div>
             </div>
         </div>
-
     </main>
-
-
 </main>
 
 
@@ -408,18 +393,13 @@
     var showWarning = false;
 </script>
 
-
-
 <script>
-        fetch('nav.html').then(res => res.text())
+    fetch('nav.html').then(res => res.text())
       .then(data => {
         document.getElementsByClassName('site-header')[0].innerHTML = data;
       });
 </script>
 
-
-
-    
 <script src="static/js/libs/require.js"></script>
 <script src="static/js/base.js"></script>
 
