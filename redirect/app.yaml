@@ -1,8 +1,0 @@
-runtime: python311
-service: default
-entrypoint: gunicorn -b :$PORT main:app
-
-
-service_account: isb-cgc-dev-1@appspot.gserviceaccount.com
-env_variables:
-    REDIRECT_HOST: "dev.isb-cgc.org"
