@@ -121,7 +121,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
                 - test
                 - uat
                 - prod
