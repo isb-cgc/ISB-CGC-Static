@@ -102,6 +102,7 @@ jobs:
     docker:
       - image: cimg/python:3.11
     steps:
+      - checkout
       - install_cloud_sdk
       - deployment_setup
       - auth
