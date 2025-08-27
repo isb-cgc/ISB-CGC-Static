@@ -43,7 +43,7 @@
         </script>
 
        <script>
-            var STATIC_FILES_URL = "static/"
+            var STATIC_FILES_URL = "/static/"
        </script>
 
 </head>
@@ -193,7 +193,7 @@
 </script>
 
 <script>
-    fetch('nav.html').then(res => res.text())
+    fetch('/nav.html').then(res => res.text())
       .then(data => {
         document.getElementsByClassName('site-header')[0].innerHTML = data;
       });
