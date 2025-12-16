@@ -327,10 +327,13 @@ a.skip-nav {
     padding: 12px 0; }
     #landing .footer-div .row > div, #citations-main .footer-div .row > div, #landing .footer-div a .row > div, #citations-main .footer-div a .row > div {
       padding: 0; }
-    #citations-main .jumbotron-fluid.footer-div, #citations-main .jumbotron-fluid.bottom-div {
+    #citations-main .jumbotron-fluid.bottom-div {
       padding: 8px;
     }
     #citations-main .jumbotron-fluid.footer-div {
+      padding: 12px;
+    }
+    #citations-main .jumbotron-fluid.bottom-div, #citations-main .jumbotron-fluid.footer-div {
       margin-top: 20px;
       border-top: 1px solid lightgray;
     }
