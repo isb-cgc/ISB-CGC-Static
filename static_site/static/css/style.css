@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
         max-width:99%!important;
     }}
 
- /* Allow for a slightly taller subnav dropdown if the screen is tall enough */ }
+ /* Allow for a slightly taller subnav dropdown if the screen is tall enough */
   @media screen and (max-height: 964px) {
     nav.subnav li.has-drop-down__more ul.drop {
       max-height: 425px; } }
@@ -227,13 +227,13 @@ a.skip-nav {
     color: #2b537b; }
   #landing .crdc-div {
     color: #5e5e5e; }
-  #landing .banner-section, #landing .footer-div {
+  #landing .banner-section, #landing .footer-div, #citations-main .footer-div {
     padding: 0; }
-    #landing .banner-section a, #landing .footer-div a {
+    #landing .banner-section a, #landing .footer-div a, #citations-main .footer-div a {
       text-decoration: underline; }
-    #landing .banner-section a, #landing .banner-section button.close, #landing .footer-div a, #landing .footer-div button.close {
+    #landing .banner-section a, #landing .banner-section button.close, #landing .footer-div a, #citations-main .footer-div a, #landing .footer-div button.close, #citations-main .footer-div button.close {
       color: #fdcfa3; }
-      #landing .banner-section a:hover, #landing .banner-section button.close:hover, #landing .footer-div a:hover, #landing .footer-div button.close:hover {
+      #landing .banner-section a:hover, #landing .banner-section button.close:hover, #landing .footer-div a:hover, #citations-main .footer-div a:hover, #landing .footer-div button.close:hover, #citations-main .footer-div button.close:hover {
         color: #bed2e4; }
   #landing .banner-section .alert {
     text-align: center;
@@ -323,13 +323,13 @@ a.skip-nav {
   #landing .bottom-div {
     font-size: 16px;
     padding: 15px 0; }
-  #landing .footer-div, #landing .footer-div a {
+  #landing .footer-div, #landing .footer-div a, #citations-main .footer-div a {
     color: white;
     font-weight: bold;
     font-size: 14px;
     background-color: #7e7e7e;
     padding: 12px 0; }
-    #landing .footer-div .row > div, #landing .footer-div a .row > div {
+    #landing .footer-div .row > div, #citations-main .footer-div .row > div, #landing .footer-div a .row > div, #citations-main .footer-div a .row > div {
       padding: 0; }
 
 
@@ -338,7 +338,7 @@ a.skip-nav {
   border-radius: 1px;
   border: 5px solid transparent;
   padding: 10px;
-  background-color: #fd7dd;
+  background-color: #fd7d;
   border-color: #eb9121;
 }
 
@@ -701,7 +701,7 @@ img, svg {
     vertical-align: middle;
 }
 
-  *, :: after, :: before {
+  *, ::after, ::before {
   box-sizing:border-box;
 }
   img {
