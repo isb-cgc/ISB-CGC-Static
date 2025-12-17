@@ -110,10 +110,16 @@ jobs:
       - run:
           name: "Static Site and Redirect Deployment"
           command: |
+            echo "[STATUS] Rsycing static site files."
             sudo -E /bin/bash ./shell/gcloud-pull-staging-files.sh
             sudo -E /bin/bash ./shell/rsync.sh
-            sudo -E gcloud config set app/cloud_build_timeout 1600
-            sudo -E gcloud app deploy --verbosity=debug --quiet ./app.yaml ./dispatch.yaml
+            if [[ TIER == "PROD" ]]; then
+              echo "[STATUS] Saw production tier; deploying redirect Flask app."
+              sudo -E gcloud config set app/cloud_build_timeout 1600
+              sudo -E gcloud app deploy --verbosity=debug --quiet ./app.yaml ./dispatch.yaml
+            else
+              echo "[STATUS] Tier is ${TIER}; redirect app will not be deployed."
+            fi
 workflows:
   version: 2
   build_and_deploy:
