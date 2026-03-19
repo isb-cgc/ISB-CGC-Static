@@ -2,6 +2,7 @@ from flask import Flask, redirect, request, jsonify
 from flask_talisman import Talisman
 import os
 import logging
+from urllib.parse import urlparse
 
 IS_APP_ENGINE = bool(os.environ.get("IS_APP_ENGINE", "false").lower() == "true")
 redirect_host = "https://{}".format(os.environ["REDIRECT_HOST"])
@@ -13,6 +14,8 @@ if IS_APP_ENGINE:
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO if IS_APP_ENGINE else logging.DEBUG)
+
+ALLOWED_HOSTS = ['isb-cgc.appspot.com', 'www.isb-cgc.appspot.com']
 
 def create_app(test_config=None):
     app = None
@@ -45,11 +48,13 @@ def create_app(test_config=None):
         @app.route("/", defaults={"path": ""})
         @app.route("/<path:path>")
         def catch_all(path):
+            if urlparse(request.url_root).hostname not in ALLOWED_HOSTS:
+                return "That host is not recognized.", 418
             # Preserve the path and query string when redirecting
             new_url = f"{redirect_host}/{path}"
             if request.query_string:
                 new_url += f"?{request.query_string.decode('utf-8')}"
-            return redirect(new_url, code=301)  # 302 temporary redirect (use 301 for permanent)
+            return redirect(new_url, code=301)
         
     except Exception as e:
         logger.error("[ERROR] During Flask app creation: ")
