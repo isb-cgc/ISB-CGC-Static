@@ -110,7 +110,7 @@ jobs:
       - run:
           name: "Static Site and Redirect Deployment"
           command: |
-            echo "[STATUS] Rsycing static site files."
+            echo "[STATUS] Rsyncing static site files."
             sudo -E /bin/bash ./shell/gcloud-pull-staging-files.sh
             sudo -E /bin/bash ./shell/rsync.sh
             if [[ ${TIER} == "PROD" ]]; then
